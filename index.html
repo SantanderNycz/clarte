@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ PRIMARY SEO ══ -->
+  <title>Clarté — Soin de Prestige | Skincare Formulé en Provence</title>
+  <meta name="description" content="Clarté révèle l'éclat naturel de la peau grâce à des formules de soin premium, véganes et concentrées en actifs botaniques. Sérums, huiles et rituels conçus en Haute-Provence." />
+  <meta name="keywords" content="skincare de luxe, soin visage premium, sérum vitamine C, cosmétique végane, soin Provence, Clarté skincare" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Clarté" />
+  <link rel="canonical" href="https://www.clarte-skincare.com/" />
+
+  <!-- ══ OPEN GRAPH / FACEBOOK ══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.clarte-skincare.com/" />
+  <meta property="og:site_name" content="Clarté" />
+  <meta property="og:title" content="Clarté — Soin de Prestige | Skincare Formulé en Provence" />
+  <meta property="og:description" content="Des formules d'exception qui célèbrent la peau dans son état le plus pur. Découvrez les collections Essence, Rituel et Nuit." />
+  <meta property="og:image" content="https://www.clarte-skincare.com/assets/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clarté — Soin de Prestige" />
+  <meta name="twitter:description" content="Skincare premium formulé en Haute-Provence. Actifs botaniques, formules véganes, rituel en trois étapes." />
+  <meta name="twitter:image" content="https://www.clarte-skincare.com/assets/og-cover.jpg" />
+
+  <!-- ══ HREFLANG — multilingue ══ -->
+  <link rel="alternate" hreflang="fr" href="https://www.clarte-skincare.com/" />
+  <link rel="alternate" hreflang="pt" href="https://www.clarte-skincare.com/pt/" />
+  <link rel="alternate" hreflang="en" href="https://www.clarte-skincare.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.clarte-skincare.com/" />
+
+  <!-- ══ FAVICON / THEME ══ -->
+  <meta name="theme-color" content="#0C0C0B" />
+
+  <!-- ══ STRUCTURED DATA — Organization + Store ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "Clarté",
+    "description": "Skincare de prestige formulé en Haute-Provence. Des actifs d'exception au service d'une peau révélée.",
+    "url": "https://www.clarte-skincare.com/",
+    "logo": "https://www.clarte-skincare.com/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/clarte",
+      "https://www.pinterest.com/clarte",
+      "https://www.youtube.com/clarte"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR",
+      "addressRegion": "Provence-Alpes-Côte d'Azur"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ══ ANNOUNCEMENT BAR ══ -->
+  <div class="announcement-bar" data-i18n="announce"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-burger" aria-label="Menu"><span></span><span></span><span></span></div>
+      <nav><ul class="header-nav">
+        <li><a href="#collections" data-i18n="nav.collections">Collections</a></li>
+        <li><a href="#rituel" data-i18n="nav.ritual">Rituel</a></li>
+        <li><a href="#philosophie" data-i18n="nav.philosophy">Philosophie</a></li>
+        <li><a href="#" data-i18n="nav.journal">Journal</a></li>
+      </ul></nav>
+
+      <a class="header-logo" href="#">Clarté</a>
+
+      <div class="header-actions">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+
+        <div class="lang-switch" role="group" aria-label="Choisir la langue">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HERO (image-banner) ══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-rule"></div>
+
+    <!-- 3D OBJECT #1 — frasco conta-gotas -->
+    <canvas id="canvas-hero"></canvas>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow" data-i18n="hero.eyebrow">Collection Été 2025</span>
+      <h1 class="hero-title" data-i18n-html="hero.title">La clarté,<br>révélée.</h1>
+      <div class="hero-meta">
+        <p class="hero-tagline" data-i18n="hero.tagline">Des formules d'exception qui célèbrent la peau dans son état le plus pur. Rien de superflu, tout de l'essentiel.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <a href="#produits" class="btn btn--dark" data-i18n="hero.cta1">Découvrir</a>
+          <a href="#philosophie" class="btn btn--outline" data-i18n="hero.cta2">Notre approche</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span data-i18n="hero.scroll">Défiler</span>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <!-- populated dynamically by i18n script for seamless loop -->
+    </div>
+  </div>
+
+  <!-- ══ RICH TEXT / PHILOSOPHIE ══ -->
+  <section class="rich-text reveal" id="philosophie">
+    <div class="rich-text__label" data-i18n="philosophy.label">Philosophie</div>
+    <div class="rich-text__body">
+      <h2 class="rich-text__heading" data-i18n="philosophy.heading">Moins, mais infiniment mieux.</h2>
+      <p class="rich-text__copy" data-i18n="philosophy.copy1">Chez Clarté, chaque formule naît d'une contrainte radicale : n'y faire entrer que ce qui transforme véritablement. Pas d'effet de volume, pas de promesses vides. Uniquement la science au service de l'essentiel.</p>
+      <p class="rich-text__copy" data-i18n="philosophy.copy2">Nos laboratoires en Haute-Provence sélectionnent des actifs botaniques à haute concentration, récoltés en cycle lunaire, préservés à froid. Chaque flacon est le résultat de trois années de recherche avant d'atteindre votre peau.</p>
+      <a href="#" class="rich-text__link" data-i18n="philosophy.link">Lire notre manifeste →</a>
+    </div>
+  </section>
+
+  <!-- ══ 3D INTERMEZZO ══ -->
+  <div class="intermezzo">
+    <!-- 3D OBJECT #2 — rolo facial -->
+    <canvas id="canvas-intermezzo"></canvas>
+    <div class="intermezzo-text">
+      <blockquote data-i18n="quote.text">La beauté n'est pas une promesse. C'est une révélation.</blockquote>
+      <cite data-i18n="quote.cite">— Clarté, Manifeste 1998</cite>
+    </div>
+  </div>
+
+  <!-- ══ COLLECTION LIST ══ -->
+  <section class="collection-list" id="collections">
+    <div class="section-header reveal">
+      <span class="eyebrow" data-i18n="collections.eyebrow">Nos lignes</span>
+      <h2 class="section-title" data-i18n-html="collections.heading">Trois rituels,<br>une seule clarté.</h2>
+    </div>
+    <div class="collection-grid">
+      <div class="collection-card reveal" data-delay="1">
+        <div class="collection-card__bg collection-card__bg--essence"></div>
+        <div class="collection-card__shape collection-card__shape--bottle"></div>
+        <div class="collection-card__info">
+          <p class="collection-card__label" data-i18n="collections.line1">Ligne I</p>
+          <h3 class="collection-card__name">Essence</h3>
+          <a href="#" class="collection-card__cta" data-i18n="collections.explore">Explorer →</a>
+        </div>
+      </div>
+      <div class="collection-card reveal" data-delay="2">
+        <div class="collection-card__bg collection-card__bg--rituel"></div>
+        <div class="collection-card__shape collection-card__shape--jar"></div>
+        <div class="collection-card__info">
+          <p class="collection-card__label" data-i18n="collections.line2">Ligne II</p>
+          <h3 class="collection-card__name">Rituel</h3>
+          <a href="#" class="collection-card__cta" data-i18n="collections.explore">Explorer →</a>
+        </div>
+      </div>
+      <div class="collection-card reveal" data-delay="3">
+        <div class="collection-card__bg collection-card__bg--nuit"></div>
+        <div class="collection-card__shape collection-card__shape--vial"></div>
+        <div class="collection-card__info">
+          <p class="collection-card__label" data-i18n="collections.line3">Ligne III</p>
+          <h3 class="collection-card__name">Nuit</h3>
+          <a href="#" class="collection-card__cta" data-i18n="collections.explore">Explorer →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FEATURED COLLECTION ══ -->
+  <section class="featured-collection" id="produits">
+    <div class="featured-collection__inner">
+      <div class="featured-collection__header reveal">
+        <div>
+          <span class="eyebrow" data-i18n="products.eyebrow">Sélection</span>
+          <h2 class="section-title" data-i18n="products.heading">Pièces d'exception</h2>
+        </div>
+        <a href="#" class="btn btn--outline" data-i18n="products.viewall">Voir tout</a>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card reveal" data-delay="1">
+          <div class="product-card__image">
+            <div class="product-card__img-bg product-card__img-bg--s"></div>
+            <div class="product-card__obj product-card__obj--serum"></div>
+            <span class="product-card__badge" data-i18n="products.badge_new">Nouveau</span>
+          </div>
+          <p class="product-card__line" data-i18n="collections.line1">Essence</p>
+          <h3 class="product-card__name" data-i18n="products.p1.name">Sérum Lumière</h3>
+          <p class="product-card__desc" data-i18n="products.p1.desc">Vitamine C stabilisée 20% · Acide férulique</p>
+          <p class="product-card__price">€ 148</p>
+        </div>
+
+        <div class="product-card reveal" data-delay="2">
+          <div class="product-card__image">
+            <div class="product-card__img-bg product-card__img-bg--h"></div>
+            <div class="product-card__obj product-card__obj--huile"></div>
+          </div>
+          <p class="product-card__line" data-i18n="collections.line1">Essence</p>
+          <h3 class="product-card__name" data-i18n="products.p2.name">Huile Précieuse</h3>
+          <p class="product-card__desc" data-i18n="products.p2.desc">Bakuchiol · Squalane · Rosier muscat</p>
+          <p class="product-card__price">€ 124</p>
+        </div>
+
+        <div class="product-card reveal" data-delay="3">
+          <div class="product-card__image">
+            <div class="product-card__img-bg product-card__img-bg--m"></div>
+            <div class="product-card__obj product-card__obj--masque"></div>
+          </div>
+          <p class="product-card__line" data-i18n="collections.line2">Rituel</p>
+          <h3 class="product-card__name" data-i18n="products.p3.name">Masque Argile</h3>
+          <p class="product-card__desc" data-i18n="products.p3.desc">Kaolin purifié · Eau thermale · Niacinamide</p>
+          <p class="product-card__price">€ 96</p>
+        </div>
+
+        <div class="product-card reveal" data-delay="4">
+          <div class="product-card__image">
+            <div class="product-card__img-bg product-card__img-bg--e"></div>
+            <div class="product-card__obj product-card__obj--elixir"></div>
+            <span class="product-card__badge" data-i18n="products.badge_best">Bestseller</span>
+          </div>
+          <p class="product-card__line" data-i18n="collections.line3">Nuit</p>
+          <h3 class="product-card__name" data-i18n="products.p4.name">Élixir Réparateur</h3>
+          <p class="product-card__desc" data-i18n="products.p4.desc">Rétinol 0.5% encapsulé · Céramides</p>
+          <p class="product-card__price">€ 186</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ IMAGE WITH TEXT / EDITORIAL (dark) ══ -->
+  <section class="editorial" id="savoir-faire">
+    <!-- 3D OBJECT #3 — esponja de limpeza de silicone -->
+    <canvas id="canvas-editorial"></canvas>
+
+    <div class="editorial__inner">
+      <div class="editorial__text reveal">
+        <span class="editorial__eyebrow" data-i18n="editorial.eyebrow">Savoir-faire</span>
+        <h2 class="editorial__title" data-i18n-html="editorial.heading">Formulé pour durer.<br>Conçu pour émouvoir.</h2>
+        <p class="editorial__copy" data-i18n="editorial.copy">Nos actifs traversent trois années de recherche avant d'atteindre votre peau. Chaque texture, chaque fragrance, chaque concentration est le résultat d'une obsession : la permanence du soin.</p>
+        <div class="editorial__stat-row">
+          <div class="editorial__stat">
+            <div class="editorial__stat-n">27</div>
+            <div class="editorial__stat-l" data-i18n="editorial.stat1">Actifs botaniques</div>
+          </div>
+          <div class="editorial__stat">
+            <div class="editorial__stat-n" data-i18n="editorial.stat2_n">3 ans</div>
+            <div class="editorial__stat-l" data-i18n="editorial.stat2">De R&D par formule</div>
+          </div>
+          <div class="editorial__stat">
+            <div class="editorial__stat-n">0</div>
+            <div class="editorial__stat-l" data-i18n="editorial.stat3">Perturbateurs endocriniens</div>
+          </div>
+        </div>
+        <a href="#" class="btn btn--outline-light" data-i18n="editorial.cta">Découvrir le laboratoire</a>
+      </div>
+      <!-- right side occupied by the 3D canvas via absolute positioning -->
+      <div></div>
+    </div>
+  </section>
+
+  <!-- ══ MULTICOLUMN / RITUAL STEPS ══ -->
+  <section class="multicolumn" id="rituel">
+    <div class="multicolumn__header reveal">
+      <span class="eyebrow" data-i18n="ritual.eyebrow">Mode d'emploi</span>
+      <h2 class="section-title" data-i18n="ritual.heading">Le rituel Clarté</h2>
+    </div>
+    <div class="multicolumn__grid">
+      <div class="multicolumn__item reveal" data-delay="1">
+        <div class="multicolumn__num">01</div>
+        <div class="multicolumn__divider"></div>
+        <h3 class="multicolumn__title" data-i18n="ritual.step1.title">Purifier</h3>
+        <p class="multicolumn__body" data-i18n="ritual.step1.body">Commencez par un nettoyage doux qui préserve le film hydrolipidique naturel de la peau.</p>
+      </div>
+      <div class="multicolumn__item reveal" data-delay="2">
+        <div class="multicolumn__num">02</div>
+        <div class="multicolumn__divider"></div>
+        <h3 class="multicolumn__title" data-i18n="ritual.step2.title">Activer</h3>
+        <p class="multicolumn__body" data-i18n="ritual.step2.body">Appliquez le sérum Essence en mouvements ascendants. Les actifs pénètrent en 90 secondes.</p>
+      </div>
+      <div class="multicolumn__item reveal" data-delay="3">
+        <div class="multicolumn__num">03</div>
+        <div class="multicolumn__divider"></div>
+        <h3 class="multicolumn__title" data-i18n="ritual.step3.title">Sceller</h3>
+        <p class="multicolumn__body" data-i18n="ritual.step3.body">Le baume Rituel fixe les soins et crée une barrière protectrice invisible sur l'épiderme.</p>
+      </div>
+      <div class="multicolumn__item reveal" data-delay="4">
+        <div class="multicolumn__num">04</div>
+        <div class="multicolumn__divider"></div>
+        <h3 class="multicolumn__title" data-i18n="ritual.step4.title">Révéler</h3>
+        <p class="multicolumn__body" data-i18n="ritual.step4.body">Le lendemain matin, la peau retrouve son éclat naturel. Le rituel Nuit a accompli son œuvre.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EMAIL SIGNUP ══ -->
+  <section class="email-signup">
+    <div class="email-signup__inner reveal">
+      <h2 class="email-signup__heading" data-i18n="newsletter.heading">Rejoindre l'univers Clarté</h2>
+      <p class="email-signup__sub" data-i18n="newsletter.sub">Accédez en avant-première aux nouvelles formules, aux éditions limitées et aux conseils exclusifs de nos laboratoires.</p>
+      <div class="email-signup__form">
+        <input class="email-signup__input" type="email" data-i18n-placeholder="newsletter.placeholder" placeholder="Votre adresse e-mail" />
+        <button class="btn btn--dark" type="submit" data-i18n="newsletter.submit">S'inscrire</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand__logo">Clarté</span>
+          <p class="footer-brand__desc" data-i18n="footer.desc">Soin de prestige formulé en Haute-Provence. Des actifs d'exception au service d'une peau révélée.</p>
+          <div class="footer-social">
+            <a href="#">Ig</a>
+            <a href="#">Pt</a>
+            <a href="#">Yt</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.col1">Collections</p>
+          <ul class="footer-col__links">
+            <li><a href="#">Essence</a></li>
+            <li><a href="#">Rituel</a></li>
+            <li><a href="#">Nuit</a></li>
+            <li><a href="#" data-i18n="footer.limited">Édition limitée</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.col2">La maison</p>
+          <ul class="footer-col__links">
+            <li><a href="#" data-i18n="nav.philosophy">Philosophie</a></li>
+            <li><a href="#" data-i18n="footer.lab">Laboratoire</a></li>
+            <li><a href="#" data-i18n="footer.ingredients">Ingrédients</a></li>
+            <li><a href="#" data-i18n="nav.journal">Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.col3">Service</p>
+          <ul class="footer-col__links">
+            <li><a href="#" data-i18n="footer.account">Mon compte</a></li>
+            <li><a href="#" data-i18n="footer.shipping">Livraison & retours</a></li>
+            <li><a href="#" data-i18n="footer.faq">FAQ</a></li>
+            <li><a href="#" data-i18n="footer.contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-bottom__legal" data-i18n="footer.legal">© 2025 Clarté. Tous droits réservés.</p>
+        <div class="footer-bottom__right">
+          <div class="footer-payments">
+            <span class="payment-icon">Visa</span>
+            <span class="payment-icon">MC</span>
+            <span class="payment-icon">Amex</span>
+            <span class="payment-icon">Apple Pay</span>
+          </div>
+          <span class="footer-bottom__locale" id="footer-locale">FR · EUR €</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- THREE.JS loaded as a global before ES modules so `THREE` is available in all scene files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

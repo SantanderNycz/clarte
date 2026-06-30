@@ -1,0 +1,13 @@
+/* ═══════════════════════════════════════
+   BASE — reset, body, global defaults
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--blanc);
+  color: var(--encre);
+  font-family: var(--font-b);
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}

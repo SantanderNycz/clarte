@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════
+   COMPONENTS — reusable elements
+   buttons, badges, eyebrows, section titles, reveal animation
+═══════════════════════════════════════ */
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-b);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  transition: all 0.25s;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  font-weight: 400;
+}
+
+.btn--dark {
+  background: var(--encre);
+  color: var(--blanc);
+}
+.btn--dark:hover { background: var(--or); color: var(--encre); }
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--encre);
+  color: var(--encre);
+}
+.btn--outline:hover { background: var(--encre); color: var(--blanc); }
+
+.btn--outline-light {
+  background: transparent;
+  border: 1px solid rgba(248,246,243,0.35);
+  color: var(--blanc);
+}
+.btn--outline-light:hover {
+  border-color: var(--argile);
+  background: rgba(188,169,140,0.12);
+}
+
+/* ── Shared section labels ── */
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--argile);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.section-header {
+  margin-bottom: clamp(48px, 6vh, 80px);
+}
+
+.section-header--split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* ── Reveal animation (IntersectionObserver) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal[data-delay="1"] { transition-delay: 0.1s; }
+.reveal[data-delay="2"] { transition-delay: 0.2s; }
+.reveal[data-delay="3"] { transition-delay: 0.3s; }
+.reveal[data-delay="4"] { transition-delay: 0.4s; }

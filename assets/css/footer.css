@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════
+   FOOTER  (Shopify: footer)
+═══════════════════════════════════════ */
+.site-footer {
+  background: var(--encre);
+  color: var(--blanc);
+}
+
+.footer-main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(56px, 8vh, 96px) var(--pad) clamp(40px, 5vh, 64px);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  margin-bottom: clamp(40px, 6vh, 72px);
+  padding-bottom: clamp(40px, 5vh, 64px);
+  border-bottom: 1px solid rgba(248,246,243,0.08);
+}
+
+.footer-brand__logo {
+  font-family: var(--font-d);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.footer-brand__desc {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.4;
+  max-width: 28ch;
+  margin-bottom: 28px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(248,246,243,0.15);
+  color: var(--blanc);
+  text-decoration: none;
+  font-size: 11px;
+  opacity: 0.5;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.footer-social a:hover { opacity: 1; border-color: var(--argile); }
+
+.footer-col__heading {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.footer-col__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.footer-col__links a {
+  font-size: 13px;
+  color: var(--blanc);
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.footer-col__links a:hover { opacity: 1; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom__legal {
+  font-size: 11px;
+  opacity: 0.28;
+}
+
+.footer-bottom__right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-bottom__locale {
+  font-size: 11px;
+  opacity: 0.35;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-payments {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.payment-icon {
+  height: 22px;
+  padding: 3px 6px;
+  background: rgba(248,246,243,0.06);
+  border-radius: 3px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: rgba(248,246,243,0.4);
+  display: flex;
+  align-items: center;
+}

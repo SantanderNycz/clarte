@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════
+   CLARTÉ — Main CSS entry point
+   Import order: tokens → base → components → layout sections → responsive
+   Mirrors Shopify Dawn's asset pipeline structure.
+═══════════════════════════════════════ */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './header.css';
+@import './hero.css';
+@import './marquee.css';
+@import './sections.css';
+@import './footer.css';
+@import './responsive.css';
