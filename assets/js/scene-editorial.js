@@ -23,11 +23,13 @@ export function initEditorialScene() {
   // ── materials ──
   const bodyMat = new THREE.MeshPhongMaterial({
     color: 0xAFE3D1,        // soft mint silicone
+    emissive: 0x3A7A66,     // self-glow so the mint reads on the dark editorial bg
     shininess: 70,
     specular: 0x9fd9c4,
   });
   const nubMat = new THREE.MeshPhongMaterial({
     color: 0xC8F0E0,        // lighter mint for the nubs
+    emissive: 0x46907A,
     shininess: 50,
     specular: 0x8fcdb8,
   });
