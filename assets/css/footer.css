@@ -89,10 +89,27 @@
   gap: 12px;
 }
 
+.footer-bottom__left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
 .footer-bottom__legal {
   font-size: 11px;
   opacity: 0.28;
 }
+
+.footer-bottom__credit {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--blanc);
+  text-decoration: none;
+  opacity: 0.45;
+  transition: opacity 0.2s, color 0.2s;
+}
+.footer-bottom__credit:hover { opacity: 1; color: var(--argile); }
 
 .footer-bottom__right {
   display: flex;

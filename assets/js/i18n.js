@@ -70,6 +70,7 @@ export const I18N = {
       lab: "Laboratoire", ingredients: "Ingrédients",
       account: "Mon compte", shipping: "Livraison & retours", faq: "FAQ", contact: "Contact",
       legal: "© 2025 Clarté. Tous droits réservés.",
+      credit: "Développé par Void Studio",
       locale: "FR · EUR €"
     },
     marquee: ["Actifs botaniques", "Formules végan certifiées", "Provençal depuis 1998", "Sans perturbateurs endocriniens", "Emballages recyclables", "Dermatologiquement testé"]
@@ -142,6 +143,7 @@ export const I18N = {
       lab: "Laboratório", ingredients: "Ingredientes",
       account: "A minha conta", shipping: "Envio & devoluções", faq: "Perguntas frequentes", contact: "Contacto",
       legal: "© 2025 Clarté. Todos os direitos reservados.",
+      credit: "Desenvolvido por Void Studio",
       locale: "PT · EUR €"
     },
     marquee: ["Ativos botânicos", "Fórmulas veganas certificadas", "Provençal desde 1998", "Sem disruptores endócrinos", "Embalagens recicláveis", "Testado dermatologicamente"]
@@ -214,6 +216,7 @@ export const I18N = {
       lab: "Laboratory", ingredients: "Ingredients",
       account: "My account", shipping: "Shipping & returns", faq: "FAQ", contact: "Contact",
       legal: "© 2025 Clarté. All rights reserved.",
+      credit: "Developed by Void Studio",
       locale: "EN · EUR €"
     },
     marquee: ["Botanical actives", "Certified vegan formulas", "Provençal since 1998", "No endocrine disruptors", "Recyclable packaging", "Dermatologically tested"]

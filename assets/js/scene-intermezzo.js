@@ -24,20 +24,20 @@ export function initIntermezzoScene() {
   // ── matte materials (specular near black — no shine) ──
   const stoneMat = new THREE.MeshPhongMaterial({
     color: 0xF0CCC6,   // rose quartz — soft pink
-    shininess: 12,
-    specular: 0x171313,
+    shininess: 4,
+    specular: 0x0d0d0d,   // matte — specular near black, no glare
     transparent: true,
     opacity: 0.96,
   });
   const metalMat = new THREE.MeshPhongMaterial({
     color: 0xDDA083,   // rosé gold frame / handle, matte
-    shininess: 20,
-    specular: 0x271f1b,
+    shininess: 4,
+    specular: 0x0d0d0d,
   });
   const darkMetalMat = new THREE.MeshPhongMaterial({
     color: 0xC08868,   // deeper rosé gold (pins / end cap)
-    shininess: 16,
-    specular: 0x221913,
+    shininess: 4,
+    specular: 0x0b0b0b,
   });
 
   const UP = new THREE.Vector3(0, 1, 0);
@@ -118,14 +118,14 @@ export function initIntermezzoScene() {
   roller.rotation.x = 0.12;
 
   // ── lighting — softened so the matte finish doesn't glare ──
-  scene.add(new THREE.AmbientLight(0xffffff, 0.65));
-  const dl = new THREE.DirectionalLight(0xFFF8F0, 1.4);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+  const dl = new THREE.DirectionalLight(0xFFF8F0, 0.7);
   dl.position.set(5, 7, 6);
   scene.add(dl);
-  const dl2 = new THREE.DirectionalLight(0xC8B89A, 0.4);
+  const dl2 = new THREE.DirectionalLight(0xC8B89A, 0.3);
   dl2.position.set(-6, -4, 2);
   scene.add(dl2);
-  const dl3 = new THREE.DirectionalLight(0xffffff, 0.25);
+  const dl3 = new THREE.DirectionalLight(0xffffff, 0.2);
   dl3.position.set(0, -5, 5);
   scene.add(dl3);
 
