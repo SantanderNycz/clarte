@@ -57,7 +57,7 @@
 .section-title {
   font-family: var(--font-d);
   font-size: clamp(32px, 4vw, 52px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.1;
 }

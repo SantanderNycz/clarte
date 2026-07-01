@@ -24,7 +24,7 @@
 .rich-text__heading {
   font-family: var(--font-d);
   font-size: clamp(38px, 5vw, 64px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.08;
   margin-bottom: 36px;
@@ -88,7 +88,7 @@
 .intermezzo-text blockquote {
   font-family: var(--font-d);
   font-size: clamp(22px, 3.5vw, 42px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.3;
   color: var(--encre);
@@ -201,7 +201,7 @@
 .collection-card__name {
   font-family: var(--font-d);
   font-size: clamp(26px, 3vw, 38px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--blanc);
   margin-bottom: 18px;
@@ -327,7 +327,7 @@
 .product-card__name {
   font-family: var(--font-d);
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   margin-bottom: 6px;
   line-height: 1.2;
@@ -342,7 +342,7 @@
 
 .product-card__price {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ═══════════════════════════════════════
@@ -391,7 +391,7 @@
 .editorial__title {
   font-family: var(--font-d);
   font-size: clamp(36px, 5vw, 64px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.06;
   color: var(--blanc);
@@ -418,7 +418,7 @@
 .editorial__stat-n {
   font-family: var(--font-d);
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--blanc);
   line-height: 1;
@@ -454,7 +454,7 @@
 .multicolumn__num {
   font-family: var(--font-d);
   font-size: 52px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--argile);
   opacity: 0.45;
@@ -474,7 +474,7 @@
   font-family: var(--font-d);
   font-size: 21px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
@@ -501,7 +501,7 @@
 .email-signup__heading {
   font-family: var(--font-d);
   font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   margin-bottom: 14px;
 }
@@ -528,7 +528,7 @@
   background: var(--blanc);
   font-family: var(--font-b);
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--encre);
   outline: none;
 }
