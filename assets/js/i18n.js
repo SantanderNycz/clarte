@@ -226,15 +226,15 @@ export const I18N = {
 // SEO metadata per language — swapped on language change
 export const SEO_I18N = {
   fr: {
-    title: "Clarté — Soin de Prestige | Skincare Formulé en Provence",
+    title: "Clarté - Soin de Prestige | Skincare Formulé en Provence",
     description: "Clarté révèle l'éclat naturel de la peau grâce à des formules de soin premium, véganes et concentrées en actifs botaniques. Sérums, huiles et rituels conçus en Haute-Provence."
   },
   pt: {
-    title: "Clarté — Cuidado de Prestígio | Skincare Formulado na Provença",
+    title: "Clarté - Cuidado de Prestígio | Skincare Formulado na Provença",
     description: "A Clarté revela o brilho natural da pele com fórmulas de cuidado premium, veganas e concentradas em ativos botânicos. Sérums, óleos e rituais concebidos na Alta Provença."
   },
   en: {
-    title: "Clarté — Prestige Skincare | Formulated in Provence",
+    title: "Clarté - Prestige Skincare | Formulated in Provence",
     description: "Clarté reveals skin's natural radiance through premium, vegan formulas concentrated in botanical actives. Serums, oils and rituals crafted in Haute-Provence."
   }
 };
