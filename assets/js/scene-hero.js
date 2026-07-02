@@ -173,7 +173,7 @@ export function initHeroScene() {
     updateScrollVelocity();
     floatT += 0.008;
 
-    rotY += 0.004 + scroll.delta * 0.014;
+    rotY += 0.004 + scroll.delta * 0.0084;
     bottle.rotation.y = rotY;
     bottle.position.y = -0.5 + Math.sin(floatT * 0.55) * 0.18;
 

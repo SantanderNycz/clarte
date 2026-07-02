@@ -165,7 +165,7 @@ export function initEditorialScene() {
     floatT += 0.007;
 
     // scroll → rotation direction and speed (reveals bristle face ↔ button)
-    rotY += 0.003 + scroll.delta * 0.012;
+    rotY += 0.003 + scroll.delta * 0.0072;
     pad.rotation.y = rotY;
     pad.position.y = 0.2 + Math.sin(floatT * 0.5) * 0.14;
 

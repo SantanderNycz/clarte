@@ -1,9 +1,12 @@
-// ─── OBJECT #2 — INTERMEZZO: ROLO FACIAL DE QUARTZO ──────
-// Facial roller: a central rosé-gold handle (cabo) with a Y-fork at each
-// end whose two prongs connect the handle tip to the axle of a rose-quartz
-// roller — large at top, small at bottom. The prongs physically span from
-// the handle end to each roller end, so nothing reads as loose.
-// Matte finish (low specular) — no plastic glare. Rotates on scroll.
+// ─── OBJECT #2 — INTERMEZZO: ROLO FACIAL DE JADE ─────────
+// Jade facial roller modelled on the reference photo:
+//   • two green jade barrel-stones (oval/olive), the top one larger;
+//   • a jade stone HANDLE with champagne-gold ferrule collars at each end;
+//   • thin champagne-gold WIRE yokes — a short stem off each collar that
+//     splits into a triangular fork to the two ends of the roller, with a
+//     thin axle running through each stone.
+// Stone is matte-polished; the slim metal frame keeps a light metallic sheen.
+// Rotates on scroll (40% slower than before).
 // Canvas position: full-width intermezzo band between philosophy and collections.
 
 import { makeRenderer } from './three-helpers.js';
@@ -21,26 +24,22 @@ export function initIntermezzoScene() {
   const roller = new THREE.Group();
   scene.add(roller);
 
-  // ── matte materials (specular near black — no shine) ──
-  const stoneMat = new THREE.MeshPhongMaterial({
-    color: 0xF0CCC6,   // rose quartz — soft pink
-    shininess: 4,
-    specular: 0x0d0d0d,   // matte — specular near black, no glare
+  // ── materials ──
+  const jadeMat = new THREE.MeshPhongMaterial({
+    color: 0x9DB177,       // green jade — soft marbled green
+    shininess: 16,         // matte-polished stone
+    specular: 0x20241a,
     transparent: true,
-    opacity: 0.96,
+    opacity: 0.98,
   });
   const metalMat = new THREE.MeshPhongMaterial({
-    color: 0xDDA083,   // rosé gold frame / handle, matte
-    shininess: 4,
-    specular: 0x0d0d0d,
-  });
-  const darkMetalMat = new THREE.MeshPhongMaterial({
-    color: 0xC08868,   // deeper rosé gold (pins / end cap)
-    shininess: 4,
-    specular: 0x0b0b0b,
+    color: 0xCCC4A6,       // pale champagne gold frame
+    shininess: 55,         // slim metal keeps a light sheen
+    specular: 0x7a7460,
   });
 
   const UP = new THREE.Vector3(0, 1, 0);
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
 
   // helper: a cylinder spanning exactly from p0 to p1 (guarantees connection)
   function connect(p0, p1, radius, mat) {
@@ -52,80 +51,62 @@ export function initIntermezzoScene() {
     return m;
   }
 
-  // ── central handle (cabo) — vertical, reaching toward both rollers ──
-  const handleTopY = 1.12, handleBotY = -1.12;
-  roller.add(connect(
-    new THREE.Vector3(0, handleBotY, 0),
-    new THREE.Vector3(0, handleTopY, 0),
-    0.12, metalMat
-  ));
+  // ── jade stone handle (cabo) ──
+  const handleTopY = 1.0, handleBotY = -1.0;
+  const handle = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.17, 0.17, handleTopY - handleBotY, 40),
+    jadeMat
+  );
+  roller.add(handle);
 
-  // ferrule rings where the forks meet the handle
-  [handleTopY - 0.08, handleBotY + 0.08].forEach(y => {
-    const ring = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.16, 32), metalMat);
-    ring.position.y = y;
-    roller.add(ring);
+  // champagne ferrule collars where the wire yokes meet the handle
+  [handleTopY, handleBotY].forEach(y => {
+    const collar = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.26, 36), metalMat);
+    collar.position.y = y;
+    roller.add(collar);
   });
 
-  // ── helper: build one roller head (barrel + caps spin; pins + prongs static) ──
-  function buildRollerHead(handleEndY, rollY, rollRadius, rollLen, prongRadius) {
-    // spinning group: barrel + rounded end caps
+  // ── helper: one jade roller head + its triangular wire yoke ──
+  function buildRollerHead(collarEndY, apexY, rollY, rollR, rollHalf) {
+    // short stem off the collar, along the axis, to the fork apex
+    roller.add(connect(V(0, collarEndY, 0), V(0, apexY, 0), 0.045, metalMat));
+
+    // jade barrel stone (oval/olive) — a sphere stretched along its axle (X)
     const spin = new THREE.Group();
-    const barrel = new THREE.Mesh(
-      new THREE.CylinderGeometry(rollRadius, rollRadius, rollLen, 64),
-      stoneMat
-    );
-    barrel.rotation.z = Math.PI / 2;   // lie along X
-    spin.add(barrel);
-    [-1, 1].forEach(s => {
-      const cap = new THREE.Mesh(
-        new THREE.SphereGeometry(rollRadius * 1.02, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2),
-        stoneMat
-      );
-      cap.position.x = s * (rollLen / 2);
-      cap.rotation.z = s < 0 ? Math.PI / 2 : -Math.PI / 2;
-      spin.add(cap);
-    });
+    const stone = new THREE.Mesh(new THREE.SphereGeometry(rollR, 48, 32), jadeMat);
+    stone.scale.set(rollHalf / rollR, 1, 1);   // stretch to an olive shape
+    spin.add(stone);
     spin.position.set(0, rollY, 0);
     roller.add(spin);
 
-    // static axle pins just beyond each roller end
-    [-1, 1].forEach(s => {
-      const pin = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.18, 16), darkMetalMat);
-      pin.rotation.z = Math.PI / 2;
-      pin.position.set(s * (rollLen / 2 + 0.09), rollY, 0);
-      roller.add(pin);
-    });
+    // thin axle rod through the stone
+    roller.add(connect(V(-rollHalf - 0.03, rollY, 0), V(rollHalf + 0.03, rollY, 0), 0.028, metalMat));
 
-    // fork prongs: handle tip → each roller axle end (these close the gap)
+    // two fork arms: apex → each end of the roller (the triangle)
     [-1, 1].forEach(s => {
-      roller.add(connect(
-        new THREE.Vector3(0, handleEndY, 0),
-        new THREE.Vector3(s * (rollLen / 2), rollY, 0),
-        prongRadius, metalMat
-      ));
+      roller.add(connect(V(0, apexY, 0), V(s * rollHalf, rollY, 0), 0.036, metalMat));
     });
 
     return spin;
   }
 
-  // top = large roller, bottom = small roller — both forks tied to the handle
-  const topSpin = buildRollerHead(handleTopY, 1.55, 0.62, 1.25, 0.06);
-  const botSpin = buildRollerHead(handleBotY, -1.55, 0.40, 0.80, 0.055);
+  // top roller larger than the bottom one (as in the photo)
+  const topSpin = buildRollerHead(handleTopY + 0.13, 1.42, 1.95, 0.42, 0.74);
+  const botSpin = buildRollerHead(handleBotY - 0.13, -1.42, -1.90, 0.34, 0.56);
 
   // tilt the whole roller diagonally, as held in the reference photo
   roller.rotation.z = 0.42;
   roller.rotation.x = 0.12;
 
-  // ── lighting — softened so the matte finish doesn't glare ──
+  // ── lighting — soft; enough for the stone to read + a touch of metal sheen ──
   scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-  const dl = new THREE.DirectionalLight(0xFFF8F0, 0.7);
+  const dl = new THREE.DirectionalLight(0xFFF8F0, 0.85);
   dl.position.set(5, 7, 6);
   scene.add(dl);
-  const dl2 = new THREE.DirectionalLight(0xC8B89A, 0.3);
+  const dl2 = new THREE.DirectionalLight(0xC8B89A, 0.35);
   dl2.position.set(-6, -4, 2);
   scene.add(dl2);
-  const dl3 = new THREE.DirectionalLight(0xffffff, 0.2);
+  const dl3 = new THREE.DirectionalLight(0xffffff, 0.25);
   dl3.position.set(0, -5, 5);
   scene.add(dl3);
 
@@ -145,10 +126,10 @@ export function initIntermezzoScene() {
     requestAnimationFrame(tick);
     floatT += 0.007;
 
-    // scroll drives direction and speed of the whole-tool rotation
-    rotY += 0.005 + scroll.delta * 0.016;
+    // scroll drives rotation — 40% slower scroll response than before
+    rotY += 0.005 + scroll.delta * 0.0096;
     roller.rotation.y = rotY;
-    // each roller barrel also spins on its own axis
+    // each stone also spins on its own axle
     topSpin.rotation.x = rotY * 1.4;
     botSpin.rotation.x = rotY * 1.1;
 
