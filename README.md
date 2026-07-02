@@ -26,10 +26,11 @@ clarte/
 │   │   ├── scroll-tracker.js   # Objeto `scroll` compartilhado + updateScrollVelocity
 │   │   ├── three-helpers.js    # makeRenderer (compartilhado pelas 3 cenas)
 │   │   ├── scene-hero.js       # Objeto 3D #1 — frasco conta-gotas (hero, canto superior direito)
-│   │   ├── scene-intermezzo.js # Objeto 3D #2 — rolo facial (faixa intermezzo, centro)
+│   │   ├── scene-intermezzo.js # Objeto 3D #2 — rolo facial de jade (faixa intermezzo, centro)
 │   │   ├── scene-editorial.js  # Objeto 3D #3 — esponja de limpeza de silicone (seção editorial escura)
 │   │   └── reveal.js           # IntersectionObserver para animação fade-up em .reveal
-│   └── img/                    # Pasta reservada para fotos reais futuras
+│   └── Produtos/               # Banco de fotos de produto candidatas (seleção final a definir);
+│                               # algumas já usadas temporariamente nos cards de produto
 └── README.md
 ```
 
@@ -67,7 +68,7 @@ Todos são animados por scroll: a velocidade e direção do scroll (`scroll.delt
 | # | Objeto | Localização na página |
 |---|--------|----------------------|
 | 1 | Frasco de sérum âmbar (vidro translúcido + conta-gotas preto + bolhas) | Hero — canto superior direito |
-| 2 | Rolo facial (quartzo rosa + estrutura rosé gold) | Faixa intermezzo — entre Filosofia e Coleções |
+| 2 | Rolo facial de jade (pedras verdes + estrutura champanhe) | Faixa intermezzo — entre Filosofia e Coleções |
 | 3 | Esponja de limpeza de silicone (corpo mint em gota + nubs + botão) | Seção editorial escura — lado direito |
 
 Three.js r128 é carregado via CDN como script global antes dos módulos ES6, ficando disponível como `window.THREE` em todas as cenas.
