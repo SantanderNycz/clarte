@@ -110,6 +110,8 @@ export function initIntermezzoScene() {
   dl3.position.set(0, -5, 5);
   scene.add(dl3);
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   let rotY = 0, floatT = 0;
 
   function resize() {
@@ -121,6 +123,11 @@ export function initIntermezzoScene() {
   }
   resize();
   window.addEventListener('resize', resize);
+
+  if (reducedMotion) {
+    renderer.render(scene, camera);
+    return;
+  }
 
   function tick() {
     requestAnimationFrame(tick);

@@ -23,7 +23,7 @@
 
 .rich-text__heading {
   font-family: var(--font-d);
-  font-size: clamp(38px, 5vw, 64px);
+  font-size: clamp(44px, 5vw, 64px);
   font-weight: 400;
   font-style: italic;
   line-height: 1.08;
@@ -390,7 +390,7 @@
 
 .editorial__title {
   font-family: var(--font-d);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(44px, 5vw, 64px);
   font-weight: 400;
   font-style: italic;
   line-height: 1.06;

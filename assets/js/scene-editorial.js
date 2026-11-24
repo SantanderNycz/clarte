@@ -148,6 +148,8 @@ export function initEditorialScene() {
   dl3.position.set(0, -6, 4);
   scene.add(dl3);
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   let rotY = 0, floatT = 0;
 
   function resize() {
@@ -159,6 +161,11 @@ export function initEditorialScene() {
   }
   resize();
   window.addEventListener('resize', resize);
+
+  if (reducedMotion) {
+    renderer.render(scene, camera);
+    return;
+  }
 
   function tick() {
     requestAnimationFrame(tick);

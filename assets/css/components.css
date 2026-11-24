@@ -56,7 +56,7 @@
 
 .section-title {
   font-family: var(--font-d);
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: clamp(35px, 4vw, 52px);
   font-weight: 400;
   font-style: italic;
   line-height: 1.1;
@@ -86,3 +86,16 @@
 .reveal[data-delay="2"] { transition-delay: 0.2s; }
 .reveal[data-delay="3"] { transition-delay: 0.3s; }
 .reveal[data-delay="4"] { transition-delay: 0.4s; }
+
+/* ── Sections with sticky-header offset ── */
+section[id], div[id="philosophie"] {
+  scroll-margin-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -33,3 +33,32 @@ initEditorialScene();
 
 // ── Reveal animation ──
 initReveal();
+
+// ── Mobile burger menu ──
+const burger = document.querySelector('.header-burger');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavClose = document.getElementById('mobile-nav-close');
+const mobileOverlay = document.getElementById('mobile-overlay');
+
+function openMobileNav() {
+  mobileNav?.classList.add('open');
+  mobileOverlay?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  burger?.setAttribute('aria-expanded', 'true');
+}
+
+function closeMobileNav() {
+  mobileNav?.classList.remove('open');
+  mobileOverlay?.classList.remove('open');
+  document.body.style.overflow = '';
+  burger?.setAttribute('aria-expanded', 'false');
+}
+
+burger?.addEventListener('click', openMobileNav);
+mobileNavClose?.addEventListener('click', closeMobileNav);
+mobileOverlay?.addEventListener('click', closeMobileNav);
+
+// Close mobile nav on anchor link click
+mobileNav?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', closeMobileNav);
+});
